@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleProp, ViewStyle, SafeAreaView } from "react-native";
+import { StyleProp, ViewStyle, SafeAreaView } from "react-native";
 import { BaseContainerProps } from "./types-container";
 import {
   backgroundColor,
@@ -15,7 +15,7 @@ import {
   alignContent,
   gap,
   height,
-  minHeight,
+  // minHeight,
   maxHeight,
   width,
   minWidth,
@@ -31,11 +31,11 @@ const MainView: React.FC<BaseContainerProps> = ({
   flexGrow: fg = "full",
   flexDirection: fd = "column",
   flexWrap: fw = "nowrap",
-  justify = "start",
-  alignItems: ai = "start",
+  justify = "center",
+  alignItems: ai = "center",
   alignContent: ac = "start",
   gap: g = "lg",
-  minHeight: mh = "md",
+  // minHeight: mh = "md",
   padding = "md",
 
   // Style Overrides
@@ -92,7 +92,7 @@ const MainView: React.FC<BaseContainerProps> = ({
     alignContent: ac ? alignContent[ac] : undefined,
     ...(g ? { gap: gap[g] } : {}),
     ...(h ? { height: typeof h === "number" ? h : height[h] } : {}),
-    ...(mh ? { minHeight: typeof mh === "number" ? mh : minHeight[mh] } : {}),
+    // ...(mh ? { minHeight: typeof mh === "number" ? mh : minHeight[mh] } : {}),
     ...(maxH
       ? { maxHeight: typeof maxH === "number" ? maxH : maxHeight[maxH] }
       : {}),
