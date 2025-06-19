@@ -56,11 +56,15 @@ const MainView: React.FC<BaseContainerProps> = ({
   mb,
   ml,
   mr,
+  mx,
+  my,
   padding: p,
   pt = "safeArea",
   pb,
   pl,
   pr,
+  px,
+  py,
 
   // Custom
   style,
@@ -71,11 +75,15 @@ const MainView: React.FC<BaseContainerProps> = ({
     mb,
     ml,
     mr,
+    mx,
+    my,
     padding: p,
     pt,
     pb,
     pl,
     pr,
+    px,
+    py,
   });
 
   const mainStyles = {
