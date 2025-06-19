@@ -1,4 +1,13 @@
-import { BoxView, colorVariants, Input, MainView, ScrollSection, StackView, textColor, Title } from "@/ui-framework";
+import {
+  BoxView,
+  colorVariants,
+  Input,
+  MainView,
+  ScrollSection,
+  StackView,
+  textColor,
+  Title,
+} from "@/ui-framework";
 import { useSignIn } from "@clerk/clerk-expo";
 import { useRouter } from "expo-router";
 import { useState } from "react";
@@ -62,19 +71,19 @@ export default function SignInScreen() {
               style={styles.image}
             />
           </BoxView>
-          
+
           <Title>Welcome Back</Title>
 
-            <StackView pt="lg" px="md">
-                <Input 
-                  placeholder="Enter email"
-                  placeholderTextColor={textColor.primary}
-                  value="email"
-                  onChangeText={setEmail}
-                  keyboardType="email-address"
-                  autoCapitalize="none"
-                />
-            </StackView>
+          <StackView pt="lg" px="md">
+            <Input
+              placeholder="Enter email"
+              placeholderTextColor={textColor.primary}
+              value="email"
+              onChangeText={setEmail}
+              keyboardType="email-address"
+              autoCapitalize="none"
+            />
+          </StackView>
         </ScrollSection>
       </KeyboardAvoidingView>
     </MainView>
