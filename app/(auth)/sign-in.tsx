@@ -2,7 +2,6 @@ import {
   BoxView,
   Input,
   MainView,
-  RowView,
   ScrollSection,
   StackView,
   textColor,
@@ -86,26 +85,23 @@ export default function SignInScreen() {
               keyboardType="email-address"
               autoCapitalize="none"
             />
-            <RowView style={{ marginBottom: 20, position: "relative" }}>
-              <Input
-                placeholder="Enter password"
-                placeholderTextColor={textColor.secondary}
-                value={password}
-                onChangeText={setPassword}
-                secureTextEntry={!showPassword}
-                autoCapitalize="none"
-              />
-              <TouchableOpacity 
-                onPress={() => setShowPassword(!showPassword)}
-              >
-                <Ionicons 
-                  name={showPassword ? "eye-outline" : "eye-off-outline"}
-                  size={20}
-                  color={textColor.secondary}
-                  style={{ position: "absolute", right: 16, top:16, padding: 4 }}
-                />
-              </TouchableOpacity>
-            </RowView>
+            <Input
+              placeholder="Enter password"
+              placeholderTextColor={textColor.secondary}
+              value={password}
+              onChangeText={setPassword}
+              secureTextEntry={!showPassword}
+              autoCapitalize="none"
+              rightElement={
+                <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
+                  <Ionicons
+                    name={showPassword ? "eye-outline" : "eye-off-outline"}
+                    size={20}
+                    color={textColor.secondary}
+                  />
+                </TouchableOpacity>
+              }
+            />
             
           </StackView>
         </ScrollSection>

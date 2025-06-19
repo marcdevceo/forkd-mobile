@@ -15,6 +15,7 @@ const Input: React.FC<BaseInputProps> = ({
   bg = "white",
   radius = "md",
   className,
+  rightElement,
   ...rest
 }: BaseInputProps) => {
   const spacing = getSpacingStyles({ padding });
@@ -25,23 +26,30 @@ const Input: React.FC<BaseInputProps> = ({
         <Text style={{ marginBottom: 6, fontWeight: "500" }}>{label}</Text>
       )}
 
-      <TextInput
-        placeholder={placeholder}
-        autoCapitalize="none"
-        secureTextEntry={type === "password"}
-        style={[
-          {
-            width: "100%",
-            borderWidth: 1,
-            borderColor: "#ccc",
-          },
-          { backgroundColor: backgroundColor[bg] },
-          { borderRadius: borderRadius[radius] },
-          spacing,
-          className,
-        ] as StyleProp<TextStyle>}
-        {...rest}
-      />
+      <View style={{ position: "relative" }}>
+        <TextInput
+          placeholder={placeholder}
+          autoCapitalize="none"
+          secureTextEntry={type === "password"}
+          style={[
+            {
+              width: "100%",
+              borderWidth: 1,
+              borderColor: "#ccc",
+            },
+            { backgroundColor: backgroundColor[bg] },
+            { borderRadius: borderRadius[radius] },
+            spacing,
+            className,
+          ] as StyleProp<TextStyle>}
+          {...rest}
+        />
+        {rightElement && (
+          <View style={{ position: "absolute", right: 16, top: 16 }}>
+            {rightElement}
+          </View>
+        )}
+      </View>
     </View>
   );
 };
