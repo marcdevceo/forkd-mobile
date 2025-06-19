@@ -18,14 +18,33 @@ const RowView: React.FC<BaseContainerProps> = ({
   pb,
   pl,
   pr,
+  px,
+  py,
   margin,
   mt,
   mb,
   ml,
   mr,
+  mx,
+  my,
   style,
 }) => {
-  const spacing = getSpacingStyles({ padding, pt, pb, pl, pr, margin, mt, mb, ml, mr });
+  const spacing = getSpacingStyles({
+    padding,
+    pt,
+    pb,
+    pl,
+    pr,
+    px,
+    py,
+    margin,
+    mt,
+    mb,
+    ml,
+    mr,
+    mx,
+    my,
+  });
 
   const rowStyles: ViewStyle = {
     flexDirection: 'row',

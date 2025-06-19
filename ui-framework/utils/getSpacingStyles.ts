@@ -24,12 +24,16 @@ export const getSpacingStyles = (props: {
     ...(props.mb && { marginBottom: margin[props.mb] }),
     ...(props.ml && { marginLeft: margin[props.ml] }),
     ...(props.mr && { marginRight: margin[props.mr] }),
+    ...(props.mx && { marginHorizontal: margin[props.mx] }),
+    ...(props.my && { marginVertical: margin[props.my] }),
 
     ...(props.padding && { padding: padding[props.padding] }),
     ...(props.pt && { paddingTop: padding[props.pt] }),
     ...(props.pb && { paddingBottom: padding[props.pb] }),
     ...(props.pl && { paddingLeft: padding[props.pl] }),
     ...(props.pr && { paddingRight: padding[props.pr] }),
+    ...(props.px && { paddingHorizontal: padding[props.px] }),
+    ...(props.py && { paddingVertical: padding[props.py] }),
   };
 
   return styles;
