@@ -1,9 +1,9 @@
 import { MainView, Title } from "@/ui-framework";
 
-export default function Index() {
+export default function SignUpScreen() {
   return (
     <MainView>
-      <Title>Its a me Mario!!!</Title>
+      <Title>SignUpScreen</Title>
     </MainView>
   );
 }

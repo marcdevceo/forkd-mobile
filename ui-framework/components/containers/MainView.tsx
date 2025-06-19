@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleProp, ViewStyle, SafeAreaView } from "react-native";
+import { StyleProp, ViewStyle, SafeAreaView, Platform, StatusBar } from "react-native";
 import { BaseContainerProps } from "./types-container";
 import {
   backgroundColor,
@@ -57,7 +57,7 @@ const MainView: React.FC<BaseContainerProps> = ({
   ml,
   mr,
   padding: p,
-  pt,
+  pt = "safeArea",
   pb,
   pl,
   pr,

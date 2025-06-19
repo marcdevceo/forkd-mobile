@@ -1,3 +1,5 @@
+import { Platform, StatusBar } from "react-native";
+
 export const padding = {
   none: 0,
   xs: 4,
@@ -10,4 +12,5 @@ export const padding = {
   '4xl': 80,
   '5xl': 96,
   '6xl': 128,
+  "safeArea": Platform.OS === "android" ? StatusBar.currentHeight: 0, 
 };

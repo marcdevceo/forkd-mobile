@@ -1,88 +1,89 @@
 export const textColor = {
-  primary: '#2C2C2C',       // Deep charcoal
-  secondary: '#6B7280',
+  primary: '#2E2A26',         // Dark espresso
+  secondary: '#7B6F66',       // Toasted almond
   light: '#FFFFFF',
-  accent: '#1E3A8A',        // Navy Blue
-  neutral: '#374151',
-  dark: '#111827',
-  red: '#B91C1C',           // Tailwind red-700
-  blue: '#1D4ED8',          // Tailwind blue-700
+  accent: '#C1440E',          // Burnt orange (like paprika)
+  neutral: '#58534F',         // Mushroom brown
+  dark: '#1B1B1B',            // Deep roast
+  red: '#D7263D',             // Bold tomato red
+  blue: '#227C9D',            // Cool sea blue
   white: '#FFFFFF',
-  success: '#16A34A',       // Tailwind green-600
-  danger: '#DC2626',        // Tailwind red-600
+  success: '#2E7D32',         // Herb green
+  danger: '#C62828',          // Cayenne red
 };
 
 export const backgroundColor = {
   none: 'transparent',
-  primary: '#E0ECF8',
-  secondary: '#CCE0F5',
-  accent: '#F8FAFC',
-  neutral: '#F1F5F9',
-  surface: '#E2E8F0',
+  primary: '#FFF4E6',         // Creamy vanilla
+  secondary: '#F5EBDD',       // Warm parchment
+  accent: '#FFF0E0',          // Light peach
+  neutral: '#F2F2F2',         // Clean eggshell
+  surface: '#F9FAFB',         // Ultra-light
   dark: '#000000',
-  red: '#FCA5A5',         // Tailwind red-300
-  redDark: '#B91C1C',     // red-700
-  blue: '#93C5FD',        // blue-300
+  red: '#FFCDD2',             // Soft cherry
+  redDark: '#D7263D',         // Tomato red
+  blue: '#BBE4F3',            // Ice blue
   white: '#FFFFFF',
-  success: '#D1FAE5',     // green-100
-  warning: '#FEF3C7',     // yellow-100
-  danger: '#FECACA',      // red-100
+  success: '#E8F5E9',         // Fresh herb
+  warning: '#FFF3CD',         // Lemon glaze
+  danger: '#F8D7DA',          // Light rose
 };
 
 export const borderColor = {
-  primary: '#3B82F6',
-  secondary: '#93C5FD',
-  accent: '#1E3A8A',
-  neutral: '#D1D5DB',
-  danger: '#F87171',
+  primary: '#E07A5F',         // Terracotta
+  secondary: '#F4A261',       // Apricot
+  accent: '#C1440E',          // Burnt orange
+  neutral: '#D6D3D1',         // Dusty almond
+  danger: '#E57373',          // Salmon red
 };
 
 export const colorVariants = {
   primary: {
-    backgroundColor: '#3B82F6',
+    backgroundColor: '#E07A5F',    // Terracotta
     textColor: '#FFFFFF',
   },
   secondary: {
-    backgroundColor: '#CCE0F5',
-    textColor: '#1E3A8A',
+    backgroundColor: '#F4A261',    // Apricot
+    textColor: '#3E2C1C',
   },
   accent: {
-    backgroundColor: '#F8FAFC',
-    textColor: '#1E3A8A',
+    backgroundColor: '#FFF0E0',    // Light peach
+    textColor: '#C1440E',
   },
   neutral: {
-    backgroundColor: '#F1F5F9',
-    textColor: '#374151',
+    backgroundColor: '#F2F2F2',    // Light grayish
+    textColor: '#58534F',
   },
   success: {
-    backgroundColor: '#D1FAE5',
-    textColor: '#16A34A',
+    backgroundColor: '#E8F5E9',
+    textColor: '#2E7D32',
   },
   warning: {
-    backgroundColor: '#FEF3C7',
-    textColor: '#B45309',
+    backgroundColor: '#FFF3CD',
+    textColor: '#B25C00',
   },
   danger: {
-    backgroundColor: '#FECACA',
-    textColor: '#DC2626',
+    backgroundColor: '#F8D7DA',
+    textColor: '#C62828',
   },
   surface: {
-    backgroundColor: '#E2E8F0',
-    textColor: '#2C2C2C',
+    backgroundColor: '#F9FAFB',
+    textColor: '#2E2A26',
   },
   ghost: {
     backgroundColor: 'transparent',
-    textColor: '#1E3A8A',
+    textColor: '#C1440E',
   },
   outlineLight: {
-    borderColor: '#1E3A8A',
-    textColor: '#1E3A8A',
+    borderColor: '#C1440E',
+    textColor: '#C1440E',
     backgroundColor: 'transparent',
   },
   outlineDark: {
-    borderColor: '#000000',
+    borderColor: '#1B1B1B',
     textColor: '#FFFFFF',
     backgroundColor: 'transparent',
   },
 } as const;
+
 
