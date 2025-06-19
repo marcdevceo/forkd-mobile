@@ -24,6 +24,7 @@ export type RadiusSize =
   | 'full';
 
 export interface BaseButtonProps {
+  children?: React.ReactNode;
   label?: string;
   variant?: ButtonVariant;
   radius?: RadiusSize;

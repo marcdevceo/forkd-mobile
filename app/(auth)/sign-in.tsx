@@ -1,23 +1,25 @@
 import {
   BoxView,
-  colorVariants,
   Input,
   MainView,
+  RowView,
   ScrollSection,
   StackView,
   textColor,
   Title,
 } from "@/ui-framework";
 import { useSignIn } from "@clerk/clerk-expo";
-import { useRouter } from "expo-router";
-import { useState } from "react";
+import { Stack, useRouter } from "expo-router";
+import React, { useState } from "react";
 import { Image } from "expo-image";
 import {
   Alert,
   KeyboardAvoidingView,
   Platform,
-  StyleSheet,
+  TouchableOpacity,
+  View,
 } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function SignInScreen() {
   const router = useRouter();
@@ -62,13 +64,14 @@ export default function SignInScreen() {
     <MainView justify="start">
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
+        keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0 }
       >
         <ScrollSection>
           <BoxView padding="md">
             <Image
               source={require("@/assets/images/signin-chef.png")}
               contentFit="contain"
-              style={styles.image}
+              style={{ width: 400, height: 400}}
             />
           </BoxView>
 
@@ -77,12 +80,33 @@ export default function SignInScreen() {
           <StackView pt="lg" px="md">
             <Input
               placeholder="Enter email"
-              placeholderTextColor={textColor.primary}
+              placeholderTextColor={textColor.secondary}
               value="email"
               onChangeText={setEmail}
               keyboardType="email-address"
               autoCapitalize="none"
             />
+            <RowView style={{ marginBottom: 20, position: "relative" }}>
+              <Input
+                placeholder="Enter password"
+                placeholderTextColor={textColor.secondary}
+                value={password}
+                onChangeText={setPassword}
+                secureTextEntry={!showPassword}
+                autoCapitalize="none"
+              />
+              <TouchableOpacity 
+                onPress={() => setShowPassword(!showPassword)}
+              >
+                <Ionicons 
+                  name={showPassword ? "eye-outline" : "eye-off-outline"}
+                  size={20}
+                  color={textColor.secondary}
+                  style={{ position: "absolute", right: 16, top:16, padding: 4 }}
+                />
+              </TouchableOpacity>
+            </RowView>
+            
           </StackView>
         </ScrollSection>
       </KeyboardAvoidingView>
@@ -90,10 +114,4 @@ export default function SignInScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  image: {
-    flex: 1,
-    width: 400,
-    height: 400,
-  },
-});
+

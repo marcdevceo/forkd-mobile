@@ -5,6 +5,7 @@ import { BaseButtonProps } from './types-button';
 import { getButtonStyle } from './buttonVariants';
 
 const Button: React.FC<BaseButtonProps> = ({
+  children,
   label,
   onPress,
   variant = 'primary',
@@ -35,6 +36,7 @@ const Button: React.FC<BaseButtonProps> = ({
       ) : (
         <Text style={[styles.text, textStyle] as StyleProp<TextStyle>}>{label}</Text>
       )}
+      {children}
     </Pressable>
   );
 };
