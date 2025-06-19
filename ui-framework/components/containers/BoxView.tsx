@@ -14,11 +14,15 @@ const BoxView: React.FC<BaseContainerProps> = ({
   pb,
   pl,
   pr,
+  px,
+  py,
   margin,
   mt,
   mb,
   ml,
   mr,
+  mx,
+  my,
   style,
 }) => {
   const spacing = getSpacingStyles({
@@ -27,11 +31,15 @@ const BoxView: React.FC<BaseContainerProps> = ({
     pb,
     pl,
     pr,
+    px,
+    py,
     margin,
     mt,
     mb,
     ml,
     mr,
+    mx,
+    my
   });
 
   const boxStyles = {

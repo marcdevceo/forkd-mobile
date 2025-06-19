@@ -26,11 +26,15 @@ const StackView: React.FC<BaseContainerProps> = ({
   pb,
   pl,
   pr,
+  px, 
+  py,
   margin,
   mt,
   mb,
   ml,
   mr,
+  mx,
+  my,
   style,
 }) => {
   const spacing = getSpacingStyles({
@@ -39,11 +43,15 @@ const StackView: React.FC<BaseContainerProps> = ({
     pb,
     pl,
     pr,
+    px,
+    py,
     margin,
     mt,
     mb,
     ml,
     mr,
+    mx,
+    my,
   });
 
   const stackStyles: ViewStyle = {

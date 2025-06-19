@@ -7,12 +7,16 @@ export const getSpacingStyles = (props: {
   mb?: keyof typeof margin;
   ml?: keyof typeof margin;
   mr?: keyof typeof margin;
+  mx?: keyof typeof margin;
+  my?: keyof typeof margin;
 
   padding?: keyof typeof padding;
   pt?: keyof typeof padding;
   pb?: keyof typeof padding;
   pl?: keyof typeof padding;
   pr?: keyof typeof padding;
+  px?: keyof typeof padding;
+  py?: keyof typeof padding;
 }): ViewStyle => {
   const styles: ViewStyle = {
     ...(props.margin && { margin: margin[props.margin] }),

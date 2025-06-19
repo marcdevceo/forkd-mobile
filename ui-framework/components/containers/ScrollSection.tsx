@@ -45,7 +45,7 @@ const ScrollSection: React.FC<BaseContainerProps> = ({
   };
 
   return (
-    <ScrollView contentContainerStyle={scrollStyles}>{children}</ScrollView>
+    <ScrollView contentContainerStyle={scrollStyles} showsVerticalScrollIndicator={false}>{children}</ScrollView>
   );
 };
 
