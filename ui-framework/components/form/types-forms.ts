@@ -25,6 +25,9 @@ export type BaseInputProps = {
   className?: object; // for passing style objects
   required?: boolean;
 
+  /** Optional element to display on the right side of the input */
+  rightElement?: React.ReactNode;
+
   button?: {
     name: string;
     variant: keyof typeof colorVariants;
