@@ -17,7 +17,7 @@ export default function HomeScreen() {
       setLoading(true);
 
       const [apiCategories, randomMeals, featuredMeal] = await Promise.all([
-        MealAPI.getCatgories(),
+        MealAPI.getCategories(),
         MealAPI.getRandomMeals(12),
         MealAPI.getRandomMeal(),
       ]);

@@ -1,4 +1,4 @@
-import { transform } from "@babel/core";
+// Utility functions to interact with TheMealDB API
 
 const BASE_URL = "https://www.themealdb.com/api/json/v1/1";
 
@@ -16,9 +16,10 @@ export const MealAPI = {
     }
   },
 
-  getMealById: async (id: any) => {
+  getMealById: async (id: string) => {
     try {
-      const response = await fetch(`${BASE_URL}/lookup.php?=${id}`);
+      // lookup meal details by id
+      const response = await fetch(`${BASE_URL}/lookup.php?i=${encodeURIComponent(id)}`);
       const data = await response.json();
       return data.meals ? data.meals[0] : null;
     } catch (error) {
@@ -51,7 +52,7 @@ export const MealAPI = {
     }
   },
 
-  getCatgories: async () => {
+  getCategories: async () => {
     try {
       const response = await fetch(`${BASE_URL}/categories.php`);
       const data = await response.json();
@@ -65,7 +66,7 @@ export const MealAPI = {
   filterByIngredient: async (ingredient: string) => {
     try {
       const response = await fetch(
-        `${BASE_URL}/filer.php?i=${encodeURIComponent(ingredient)}`
+        `${BASE_URL}/filter.php?i=${encodeURIComponent(ingredient)}`
       );
       const data = await response.json();
       return data.meals || [];
@@ -78,7 +79,7 @@ export const MealAPI = {
   filterByCategory: async (category: string) => {
     try {
       const response = await fetch(
-        `${BASE_URL}/filer.php?c=${encodeURIComponent(category)}`
+        `${BASE_URL}/filter.php?c=${encodeURIComponent(category)}`
       );
       const data = await response.json();
       return data.meals || [];
@@ -93,11 +94,11 @@ export const MealAPI = {
 
     const ingredients = [];
     for (let i = 1; i <= 20; i++) {
-      const ingredient = meal[`strIngredient$(i)`];
+      const ingredient = meal[`strIngredient${i}`];
       const measure = meal[`strMeasure${i}`];
-      if (ingredient ** ingredient.trim()) {
+      if (ingredient && ingredient.trim()) {
         const measureText =
-          measure && measure.trim() ? `${measure.trim()}` : "";
+          measure && measure.trim() ? `${measure.trim()} ` : "";
         ingredients.push(`${measureText}${ingredient.trim()}`);
       }
     }
@@ -110,7 +111,7 @@ export const MealAPI = {
       id: meal.idMeal,
       title: meal.strMeal,
       description: meal.strInstructions
-        ? meal.strInstructions.substrin(0, 120) + "..."
+        ? meal.strInstructions.substring(0, 120) + "..."
         : "Delicious meal from TheMealDB",
       image: meal.strMealThumb,
       cookTime: "30 minutes",
