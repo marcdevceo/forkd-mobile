@@ -27,15 +27,26 @@ export const MealAPI = {
     }
   },
 
-  getRandomMeal: async (count = 6): Promise<any[]> => {
+  getRandomMeal: async () => {
+    try {
+      const response = await fetch(`${BASE_URL}/random.php`);
+      const data = await response.json();
+      return data.meals ? data.meals[0] : null;
+    } catch (error) {
+      console.error("Error getting random meal:", error);
+      return null;
+    }
+  },
+
+  getRandomMeals: async (count = 6) => {
     try {
       const promises = Array(count)
         .fill(null)
-        .map(async () => MealAPI.getRandomMeal());
+        .map(() => MealAPI.getRandomMeal());
       const meals = await Promise.all(promises);
       return meals.filter((meal) => meal !== null);
     } catch (error) {
-      console.error("Error getting random meal: ", error);
+      console.error("Error getting random meals:", error);
       return [];
     }
   },
@@ -77,7 +88,7 @@ export const MealAPI = {
     }
   },
 
-  transformMeadData: (meal: any) => {
+  transformMealData: (meal: any) => {
     if (!meal) return null;
 
     const ingredients = [];
