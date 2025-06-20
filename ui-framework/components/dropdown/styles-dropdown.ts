@@ -2,7 +2,7 @@ import {
   padding,
   fontSize,
   fontWeight,
-  textColor,
+  text,
   borderRadius,
 } from "../../theme";
 import { StyleSheet } from "react-native";
@@ -14,17 +14,17 @@ export const styles = StyleSheet.create({
   label: {
     fontSize: fontSize.sm,
     fontWeight: fontWeight.medium,
-    color: textColor.primary,
+    color: text.primary,
     marginBottom: 4,
   },
   dropdown: {
-    backgroundColor: textColor.accent,
+    backgroundColor: text.accent,
     padding: padding.sm,
     borderRadius: borderRadius.md,
   },
   dropdownText: {
     fontSize: fontSize.base,
-    color: textColor.dark,
+    color: text.dark,
   },
   modalOverlay: {
     flex: 1,
@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: padding.md,
   },
   modalContent: {
-    backgroundColor: textColor.white,
+    backgroundColor: text.white,
     borderRadius: borderRadius.lg,
     maxHeight: 300,
     padding: padding.sm,
@@ -43,6 +43,6 @@ export const styles = StyleSheet.create({
   },
   optionText: {
     fontSize: fontSize.base,
-    color: textColor.dark,
+    color: text.dark,
   },
 });

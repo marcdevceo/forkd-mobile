@@ -5,7 +5,7 @@ import Button from "../button/Button";
 import Input from "./Input";
 import { BaseFormProps, BaseInputProps } from "./types-forms";
 import {
-  backgroundColor,
+  background,
   borderRadius,
   shadow as shadowStyles,
   padding as paddingTokens,
@@ -31,7 +31,7 @@ const Form: React.FC<BaseFormProps> = ({
     padding: padding as keyof typeof paddingTokens,
     margin: margin as keyof typeof marginTokens,
   });
-  const background = { backgroundColor: backgroundColor[bg] };
+  const background = { backgroundColor: background[bg] };
   const border = radius ? { borderRadius: borderRadius["lg"] } : {};
   const elevation = useShadow ? shadowStyles["md"] : {};
 

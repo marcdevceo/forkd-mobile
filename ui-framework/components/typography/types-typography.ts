@@ -1,13 +1,13 @@
 import React from "react";
 import { TextProps, StyleProp, TextStyle } from "react-native";
-import { fontSize, fontWeight, textAlign, textColor } from "../../theme";
+import { fontSize, fontWeight, textAlign, text } from "../../theme";
 
 export type BaseTextProps = {
   children: React.ReactNode;
 
   // 🧑🏾 Style Tokens
   align?: keyof typeof textAlign;
-  color?: keyof typeof textColor;
+  color?: keyof typeof text;
   size?: keyof typeof fontSize;
   weight?: keyof typeof fontWeight;
 //   font?: keyof typeof fontTokens;
@@ -18,7 +18,7 @@ export type BaseTextProps = {
 } & TextProps;
 
 export type ListsProps<T> = {
-  color?: keyof typeof textColor;
+  color?: keyof typeof text;
   listDisc?: boolean;
   lists: T[];
   width?: number | string;

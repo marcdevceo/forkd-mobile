@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "react-native";
 import { BaseCardProps } from "./types-cards";
 import {
-  backgroundColor,
+  background,
   borderRadius,
   padding,
   margin,
@@ -23,7 +23,7 @@ const Card: React.FC<BaseCardProps> = ({
   style,
 }) => {
   const cardStyles = {
-    backgroundColor: backgroundColor[bg],
+    backgroundColor: background[bg],
     borderRadius: rounded ? borderRadius.xl : 0,
     ...(p ? { padding: padding[p] } : {}),
     ...(px ? { paddingHorizontal: padding[px] } : {}),

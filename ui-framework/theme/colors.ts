@@ -39,50 +39,50 @@ export const borderColor = {
 
 export const colorVariants = {
   primary: {
-    backgroundColor: '#E07A5F',    // Terracotta
-    textColor: '#FFFFFF',
+    background: '#E07A5F',    // Terracotta
+    text: '#FFFFFF',
   },
   secondary: {
-    backgroundColor: '#F4A261',    // Apricot
-    textColor: '#3E2C1C',
+    background: '#F4A261',    // Apricot
+    text: '#3E2C1C',
   },
   accent: {
-    backgroundColor: '#FFF0E0',    // Light peach
-    textColor: '#C1440E',
+    background: '#FFF0E0',    // Light peach
+    text: '#C1440E',
   },
   neutral: {
-    backgroundColor: '#F2F2F2',    // Light grayish
-    textColor: '#58534F',
+    background: '#F2F2F2',    // Light grayish
+    text: '#58534F',
   },
   success: {
-    backgroundColor: '#E8F5E9',
-    textColor: '#2E7D32',
+    background: '#E8F5E9',
+    text: '#2E7D32',
   },
   warning: {
-    backgroundColor: '#FFF3CD',
-    textColor: '#B25C00',
+    background: '#FFF3CD',
+    text: '#B25C00',
   },
   danger: {
-    backgroundColor: '#F8D7DA',
-    textColor: '#C62828',
+    background: '#F8D7DA',
+    text: '#C62828',
   },
   surface: {
-    backgroundColor: '#F9FAFB',
-    textColor: '#2E2A26',
+    background: '#F9FAFB',
+    text: '#2E2A26',
   },
   ghost: {
-    backgroundColor: 'transparent',
-    textColor: '#C1440E',
+    background: 'transparent',
+    text: '#C1440E',
   },
   outlineLight: {
     borderColor: '#C1440E',
-    textColor: '#C1440E',
-    backgroundColor: 'transparent',
+    text: '#C1440E',
+    background: 'transparent',
   },
   outlineDark: {
     borderColor: '#1B1B1B',
-    textColor: '#FFFFFF',
-    backgroundColor: 'transparent',
+    text: '#FFFFFF',
+    background: 'transparent',
   },
 } as const;
 

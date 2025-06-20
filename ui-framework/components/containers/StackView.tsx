@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleProp, ViewStyle } from "react-native";
 import { BaseContainerProps } from "./types-container";
 import {
-  backgroundColor,
+  background,
   borderRadius,
   flexGrow,
   justifyContent,
@@ -56,7 +56,7 @@ const StackView: React.FC<BaseContainerProps> = ({
 
   const stackStyles: ViewStyle = {
     flexDirection: "column",
-    backgroundColor: backgroundColor[bg],
+    backgroundColor: background[bg],
     borderRadius: br ? borderRadius[br] : undefined,
     flexGrow: fg ? flexGrow[fg] : undefined,
     justifyContent: justify ? justifyContent[justify] : undefined,

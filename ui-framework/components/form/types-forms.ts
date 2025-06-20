@@ -6,7 +6,7 @@ import {
   ViewProps,
 } from "react-native";
 import {
-  backgroundColor,
+  background,
   borderRadius,
   colorVariants,
   margin,
@@ -20,7 +20,7 @@ export type BaseInputProps = {
   type?: "text" | "password";
   placeholder?: string;
   padding?: keyof typeof padding;
-  bg?: keyof typeof backgroundColor;
+  bg?: keyof typeof background;
   radius?: keyof typeof borderRadius;
   className?: object; // for passing style objects
   required?: boolean;
@@ -44,7 +44,7 @@ export type BaseFormProps = {
   title?: string;
   buttonTitle?: string;
   buttonVariant?: keyof typeof colorVariants;
-  bg?: keyof typeof backgroundColor;
+  bg?: keyof typeof background;
   padding?: keyof typeof padding;
   margin?: keyof typeof margin;
   shadow?: boolean;
