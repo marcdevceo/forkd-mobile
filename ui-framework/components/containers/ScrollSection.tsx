@@ -1,7 +1,7 @@
 import React from "react";
 import { ScrollView } from "react-native";
 import { BaseContainerProps } from "./types-container";
-import { backgroundColor, borderRadius, overflow, shadow } from "../../theme";
+import { background, borderRadius, overflow, shadow } from "../../theme";
 import { getSpacingStyles } from "../../utils/getSpacingStyles";
 
 const ScrollSection: React.FC<BaseContainerProps> = ({
@@ -44,7 +44,7 @@ const ScrollSection: React.FC<BaseContainerProps> = ({
   });
 
   const scrollStyles = {
-    backgroundColor: backgroundColor[bg],
+    backgroundColor: background[bg],
     borderRadius: br ? borderRadius[br] : undefined,
     overflow: of ? overflow[of] : undefined,
     ...(shadowKey ? shadow[shadowKey] : {}),

@@ -1,12 +1,12 @@
 import React from 'react';
 import { ViewProps } from 'react-native';
-import { backgroundColor, fontSize, fontWeight, margin, maxWidth, overflow, padding, textAlign } from '../../theme';
+import { background, fontSize, fontWeight, margin, maxWidth, overflow, padding, textAlign } from '../../theme';
 
 export type BaseFooterProps = {
   children?: React.ReactNode;
 
   // 🎨 Visual
-  bg?: keyof typeof backgroundColor;
+  bg?: keyof typeof background;
   overflow?: keyof typeof overflow;
 
   // 📐 Layout

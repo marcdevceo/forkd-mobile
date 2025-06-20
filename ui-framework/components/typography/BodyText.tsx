@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, StyleSheet, StyleProp, TextStyle } from "react-native";
 import { BaseTextProps } from "./types-typography";
-import { fontSize, fontWeight, textAlign, textColor } from "../../theme";
+import { fontSize, fontWeight, textAlign, text } from "../../theme";
 
 const BodyText: React.FC<BaseTextProps> = ({
   children,
@@ -21,7 +21,7 @@ const BodyText: React.FC<BaseTextProps> = ({
         { fontSize: fontSize[size] },
         { fontWeight: fontWeight[weight] },
         // fontTokens[font],
-        { color: textColor[color] },
+        { color: text[color] },
         { textAlign: textAlign[align] },
         italic && styles.italic,
         style,

@@ -4,7 +4,7 @@ import {
   fontSize,
   fontWeight,
   padding,
-  textColor,
+  text,
 } from "../../theme";
 
 export type Option = {

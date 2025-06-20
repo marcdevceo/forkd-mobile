@@ -2,7 +2,7 @@ import React from "react";
 import { StyleProp, ViewStyle, SafeAreaView, Platform, StatusBar } from "react-native";
 import { BaseContainerProps } from "./types-container";
 import {
-  backgroundColor,
+  background,
   borderRadius,
   overflow,
   zIndex,
@@ -87,7 +87,7 @@ const MainView: React.FC<BaseContainerProps> = ({
   });
 
   const mainStyles = {
-    backgroundColor: backgroundColor[bg],
+    backgroundColor: background[bg],
     borderRadius: br ? borderRadius[br] : undefined,
     overflow: of ? overflow[of] : undefined,
     zIndex: z ? zIndex[z] : undefined,

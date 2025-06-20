@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
 import { BaseContainerProps } from "./types-container";
-import { backgroundColor, borderRadius, shadow } from "../../theme";
+import { background, borderRadius, shadow } from "../../theme";
 import { getSpacingStyles } from "../../utils/getSpacingStyles";
 
 const BoxView: React.FC<BaseContainerProps> = ({
@@ -43,7 +43,7 @@ const BoxView: React.FC<BaseContainerProps> = ({
   });
 
   const boxStyles = {
-    backgroundColor: backgroundColor[bg],
+    backgroundColor: background[bg],
     borderRadius: br ? borderRadius[br] : undefined,
     ...(shadowKey ? shadow[shadowKey] : {}),
     ...spacing,

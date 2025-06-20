@@ -7,8 +7,8 @@ import {
   fontSize,
   fontWeight,
   textAlign,
-  backgroundColor,
-  textColor,
+  background,
+  text,
   overflow,
 } from "../../theme";
 import { BaseFooterProps } from "./types-footer";
@@ -38,7 +38,7 @@ const Footer: React.FC<BaseFooterProps> = ({
     <View
       style={[
         {
-          backgroundColor: backgroundColor[bg],
+          backgroundColor: background[bg],
           padding: padding[paddingKey],
           overflow: overflowKey ? overflow[overflowKey] : undefined,
         },
@@ -74,7 +74,7 @@ const Footer: React.FC<BaseFooterProps> = ({
             style={{
               fontSize: fontSize[fontSizeKey],
               fontWeight: fontWeight[fontWeightKey],
-              color: textColor.primary,
+              color: text.primary,
               textAlign: textAlign[textAlignKey],
               marginBottom: 4,
             } as TextStyle}
@@ -87,7 +87,7 @@ const Footer: React.FC<BaseFooterProps> = ({
           <Text
             style={{
               fontSize: fontSize[fontSizeKey],
-              color: textColor.secondary,
+              color: text.secondary,
               textAlign: textAlign[textAlignKey],
             } as TextStyle}
           >

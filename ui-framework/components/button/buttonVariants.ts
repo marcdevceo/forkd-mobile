@@ -8,16 +8,16 @@ export const getButtonStyle = (
   py: keyof typeof padding,
   disabled: boolean = false
 ): { container: ViewStyle; text: TextStyle } => {
-  const { backgroundColor, textColor, borderColor } =
+  const { background, text, borderColor } =
     colorVariants[variant] as {
-      backgroundColor: string;
-      textColor: string;
+      background: string;
+      text: string;
       borderColor?: string;
     };
 
   const styles = {
     container: {
-      backgroundColor: backgroundColor,
+      backgroundColor: background,
       borderRadius: borderRadius[radius] || borderRadius.sm,
       borderWidth: borderColor ? 1 : 0,
       borderColor: borderColor || "transparent",
@@ -28,7 +28,7 @@ export const getButtonStyle = (
       ...(disabled ? state.disabled : {}),
     } as ViewStyle,
     text: {
-      color: textColor,
+      color: text,
       fontWeight: fontWeight.semibold,
       fontSize: 16,
     } as TextStyle,

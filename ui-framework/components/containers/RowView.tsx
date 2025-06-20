@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleProp, ViewStyle } from 'react-native';
 import { BaseContainerProps } from './types-container';
-import { backgroundColor, borderRadius, flexGrow, flexWrap, justifyContent, alignItems, shadow } from '../../theme';
+import { background, borderRadius, flexGrow, flexWrap, justifyContent, alignItems, shadow } from '../../theme';
 import { getSpacingStyles } from '../../utils/getSpacingStyles';
 
 const RowView: React.FC<BaseContainerProps> = ({
@@ -48,7 +48,7 @@ const RowView: React.FC<BaseContainerProps> = ({
 
   const rowStyles: ViewStyle = {
     flexDirection: 'row',
-    backgroundColor: backgroundColor[bg],
+    backgroundColor: background[bg],
     borderRadius: br ? borderRadius[br] : undefined,
     flexGrow: fg ? flexGrow[fg] : undefined,
     flexWrap: fw ? flexWrap[fw] : undefined,

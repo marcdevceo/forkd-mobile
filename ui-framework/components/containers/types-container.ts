@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { ViewStyle } from "react-native";
 import {
-  backgroundColor,
+  background,
   borderRadius,
   shadow,
   overflow,
@@ -28,7 +28,7 @@ export interface BaseContainerProps {
   children: ReactNode;
 
   // 🎨 Visual
-  bg?: keyof typeof backgroundColor;
+  bg?: keyof typeof background;
   borderRadius?: keyof typeof borderRadius;
   shadow?: keyof typeof shadow;
   overflow?: keyof typeof overflow;

@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, TextInput, StyleProp, TextStyle } from "react-native";
 import { getSpacingStyles } from "../../utils/getSpacingStyles";
 import { BaseInputProps } from "./types-forms";
-import { backgroundColor, borderRadius } from "../../theme";
+import { background, borderRadius } from "../../theme";
 
 const Input: React.FC<BaseInputProps> = ({
   id,
@@ -37,7 +37,7 @@ const Input: React.FC<BaseInputProps> = ({
               borderWidth: 1,
               borderColor: "#ccc",
             },
-            { backgroundColor: backgroundColor[bg] },
+            { backgroundColor: background[bg] },
             { borderRadius: borderRadius[radius] },
             spacing,
             className,
