@@ -3,18 +3,16 @@ import {
   BodyText,
   BoxView,
   Button,
-  Caption,
   Input,
   MainView,
-  opacity,
   RowView,
   ScrollSection,
   StackView,
-  textColor,
+  text,
   Title,
 } from "@/ui-framework";
 import { useSignIn } from "@clerk/clerk-expo";
-import { Stack, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import { Image } from "expo-image";
 import {
@@ -22,7 +20,6 @@ import {
   KeyboardAvoidingView,
   Platform,
   TouchableOpacity,
-  View,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -90,7 +87,7 @@ export default function SignInScreen() {
           <StackView pt="lg" px="md">
             <Input
               placeholder="Enter email"
-              placeholderTextColor={textColor.secondary}
+              placeholderTextColor={text.secondary}
               value="email"
               onChangeText={setEmail}
               keyboardType="email-address"
@@ -98,7 +95,7 @@ export default function SignInScreen() {
             />
             <Input
               placeholder="Enter password"
-              placeholderTextColor={textColor.secondary}
+              placeholderTextColor={text.secondary}
               value={password}
               onChangeText={setPassword}
               secureTextEntry={!showPassword}
@@ -110,7 +107,7 @@ export default function SignInScreen() {
                   <Ionicons
                     name={showPassword ? "eye-outline" : "eye-off-outline"}
                     size={20}
-                    color={textColor.secondary}
+                    color={text.secondary}
                   />
                 </TouchableOpacity>
               }
