@@ -88,7 +88,7 @@ export default function SignInScreen() {
             <Input
               placeholder="Enter email"
               placeholderTextColor={text.secondary}
-              value="email"
+              value={email}
               onChangeText={setEmail}
               keyboardType="email-address"
               autoCapitalize="none"
