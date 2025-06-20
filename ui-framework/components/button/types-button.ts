@@ -1,3 +1,4 @@
+import { padding } from '@/ui-framework/theme';
 import { ViewStyle, TextStyle, GestureResponderEvent, StyleProp } from 'react-native';
 
 export type ButtonVariant =
@@ -28,6 +29,8 @@ export interface BaseButtonProps {
   label?: string;
   variant?: ButtonVariant;
   radius?: RadiusSize;
+  px?: keyof typeof padding;
+  py?: keyof typeof padding;
   isLoading?: boolean;
   loadingText?: string;
   disabled?: boolean;

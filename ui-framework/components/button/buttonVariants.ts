@@ -1,9 +1,11 @@
 import { ViewStyle, TextStyle } from "react-native";
-import { borderRadius, colorVariants, fontWeight, state } from "../../theme";
+import { borderRadius, colorVariants, fontWeight, padding, state } from "../../theme";
 
 export const getButtonStyle = (
   variant: keyof typeof colorVariants,
   radius: keyof typeof borderRadius,
+  px: keyof typeof padding,
+  py: keyof typeof padding,
   disabled: boolean = false
 ): { container: ViewStyle; text: TextStyle } => {
   const { backgroundColor, textColor, borderColor } =
@@ -19,8 +21,8 @@ export const getButtonStyle = (
       borderRadius: borderRadius[radius] || borderRadius.sm,
       borderWidth: borderColor ? 1 : 0,
       borderColor: borderColor || "transparent",
-      paddingVertical: 12,
-      paddingHorizontal: 16,
+      paddingHorizontal: padding[px] || 12,
+      paddingVertical: padding[py] || 16,
       alignItems: "center" as ViewStyle["alignItems"],
       justifyContent: "center" as ViewStyle["justifyContent"],
       ...(disabled ? state.disabled : {}),

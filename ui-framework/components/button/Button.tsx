@@ -9,14 +9,16 @@ const Button: React.FC<BaseButtonProps> = ({
   label,
   onPress,
   variant = 'primary',
-  radius = 'sm',
+  radius = 'md',
+  px = "2xl",
+  py = "md",
   disabled = false,
   isLoading = false,
   loadingText = 'Loading...',
   style,
   textStyle,
 }) => {
-  const styles = getButtonStyle(variant, radius, disabled);
+  const styles = getButtonStyle(variant, radius, px, py, disabled);
 
   return (
     <Pressable

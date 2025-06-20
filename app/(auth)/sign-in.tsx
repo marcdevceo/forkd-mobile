@@ -1,7 +1,13 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
+  BodyText,
   BoxView,
+  Button,
+  Caption,
   Input,
   MainView,
+  opacity,
+  RowView,
   ScrollSection,
   StackView,
   textColor,
@@ -60,17 +66,22 @@ export default function SignInScreen() {
   };
 
   return (
-    <MainView justify="start">
+    <MainView>
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
-        keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0 }
+        keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0}
       >
         <ScrollSection>
           <BoxView padding="md">
             <Image
               source={require("@/assets/images/signin-chef.png")}
               contentFit="contain"
-              style={{ width: 400, height: 400}}
+              style={[
+                { width: 400, height: 400 },
+                Platform.OS === "android"
+                  ? { marginTop: 50 }
+                  : { marginTop: 0 },
+              ]}
             />
           </BoxView>
 
@@ -93,7 +104,9 @@ export default function SignInScreen() {
               secureTextEntry={!showPassword}
               autoCapitalize="none"
               rightElement={
-                <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
+                <TouchableOpacity
+                  onPress={() => setShowPassword(!showPassword)}
+                >
                   <Ionicons
                     name={showPassword ? "eye-outline" : "eye-off-outline"}
                     size={20}
@@ -102,12 +115,30 @@ export default function SignInScreen() {
                 </TouchableOpacity>
               }
             />
-            
+            <Button
+              label="Sign In"
+              loadingText="Signin In"
+              onPress={handleSignIn}
+              disabled={loading}
+              style={loading ? { opacity: 0.6 } : undefined}
+            />
           </StackView>
+          <RowView justify="center">
+            <Button
+              variant="ghost"
+              loadingText="Signin Up"
+              onPress={() => router.push("/(auth)/sign-up")}
+            >
+              <BodyText>
+                Don't have an account?{" "}
+                <BodyText color="primary" weight="bold">
+                  Sign Up
+                </BodyText>
+              </BodyText>
+            </Button>
+          </RowView>
         </ScrollSection>
       </KeyboardAvoidingView>
     </MainView>
   );
 }
-
-

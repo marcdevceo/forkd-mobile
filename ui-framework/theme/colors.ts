@@ -1,4 +1,4 @@
-export const textColor = {
+export const text = {
   primary: '#2E2A26',         // Dark espresso
   secondary: '#7B6F66',       // Toasted almond
   light: '#FFFFFF',
@@ -12,7 +12,7 @@ export const textColor = {
   danger: '#C62828',          // Cayenne red
 };
 
-export const backgroundColor = {
+export const background = {
   none: 'transparent',
   primary: '#FFF4E6',         // Creamy vanilla
   secondary: '#F5EBDD',       // Warm parchment
